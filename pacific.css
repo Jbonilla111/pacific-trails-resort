@@ -1,0 +1,149 @@
+/* Make HTML5 elements display properly */
+header, hgroup, nav, footer, figure, figcaption, aside, section, article {
+    display: block;
+}
+
+/* Body fallback */
+body {
+    background: linear-gradient(to bottom, #ffffff, #00569f),
+                url("ptrbackground.jpg") no-repeat top center;
+    color: #666666;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Wrapper holds all content and gradient image */
+#wrapper {
+    width: 80%;
+    min-width: 600px;
+    margin: 0 auto; /* centers the wrapper */
+    background-color: #ffffff;
+    background-size: 100% auto; /* stretch width of image, keep height proportional */
+    min-height: 100vh; /* ensures full viewport height */
+    overflow: hidden; /* hide the extra padding/margin from nav */
+}
+
+/* Header with sunset image background */
+h1 {
+    margin: 0;
+    padding: 20px 0;
+    font-family: Georgia, "Times New Roman", serif;
+    /* Sunset image as background */
+    background: url("sunset.jpg") no-repeat center center;
+    background-size: cover; /* fills the h1 area */
+    color: white;
+    font-size: 1.7em;
+    padding-left: 20px;
+}
+
+/* Navigation bar on the left - long rectangle */
+nav {
+    background-color: #b3d9ff; /* light baby blue */
+    width: 200px;  /* long rectangle width */
+    padding: 10px;
+    float: left;  /* move to left side */
+    padding-bottom: 9999px; /* large padding bottom */
+    margin-bottom: -9999px; /* negative margin to offset padding */
+    box-sizing: border-box;
+}
+
+nav ul {
+    list-style: none; /* remove default bullets */
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    margin-bottom: 10px; /* spacing between links */
+}
+
+nav a {
+    text-decoration: none; 
+    color: #031742; /* navy blue */
+    display: block;
+    font-size: 1.5em; /* bigger links */
+    font-weight: bold;
+    padding: 5px;
+}
+
+nav a:hover {
+    color: #FFFFFF;
+    background-color: #3399CC; /* highlight on hover */
+}
+
+/* Push content to the right of nav */
+#content {
+    margin-left: 220px; /* leave space for nav width + padding */
+    padding: 20px;
+}
+
+/* Subheaders */
+h2 {
+    color: #3399CC;
+    font-family: Georgia, "Times New Roman", serif;
+    margin: 0 0 15px 0;
+    padding: 0;
+}
+
+/* Resort name special color */
+.resort {
+    color: #4c7194;
+    font-weight: bold;
+}
+
+/* Images inside content */
+#content img {
+    width: 50%;
+    height: auto;
+    float: left;
+    margin: 0 20px 20px 0;
+}
+
+/* Main content paragraph */
+#content > p {
+    margin: 0 0 15px 0;
+    line-height: 1.5;
+}
+
+/* Bulleted list with custom marker */
+#content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+}
+
+#content ul li {
+    background: url("marker.gif") no-repeat left center;
+    padding-left: 25px; /* leave space for bullet */
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+/* Contact info */
+#contact {
+    font-size: 90%;
+    clear: both;
+    margin-top: 20px;
+}
+
+/* Definition term color (if any dt tags) */
+dt {
+    color: #000033;
+}
+
+/* Footer */
+footer {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 0.9em;
+    padding: 10px;
+    clear: both;
+    margin-left: 220px; /* align with content */
+}
+
+/* Clearfix to contain floated elements inside content */
+#content::after {
+    content: "";
+    display: table;
+    clear: both;
+}
